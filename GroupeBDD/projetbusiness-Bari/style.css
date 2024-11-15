@@ -1,0 +1,99 @@
+/* Styles généraux pour centrer le contenu */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Styles pour le conteneur de connexion et de réinitialisation */
+.login-container, .reset-container {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: none; /* Masque les deux conteneurs au départ */
+}
+
+/* Affiche seulement le conteneur actif */
+.login-container.active, .reset-container.active {
+    display: block;
+}
+
+/* Styles pour le titre */
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Marges entre les champs */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Style des étiquettes */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* Style des champs de saisie */
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Style du bouton */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Couleur du bouton en survol */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles pour les messages d'erreur et de succès */
+.error, .success {
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+/* Couleur pour les messages d'erreur et succès */
+.error { color: red; }
+.success { color: green; }
+
+/* Style du lien "Mot de passe oublié" */
+.forgot-password {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Style du lien */
+.forgot-password a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Soulignement au survol */
+.forgot-password a:hover {
+    text-decoration: underline;
+}

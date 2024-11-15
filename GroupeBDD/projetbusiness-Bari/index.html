@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connexion</title>
+    <link rel="stylesheet" href="style.css"> <!-- Lien vers le fichier CSS -->
+</head>
+<body>
+    <!-- Formulaire de connexion -->
+    <div class="login-container active" id="loginContainer">
+        <h2>Connexion</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" required placeholder="exemple@domaine.com" 
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Entrez une adresse e-mail valide, par exemple : exemple@domaine.com">
+            </div>
+            <div class="form-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Se connecter</button>
+            <p class="error" id="errorMsg">Identifiant ou mot de passe incorrect.</p>
+            <div class="forgot-password">
+                <a href="#" onclick="showResetForm()">Mot de passe oublié ?</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Formulaire de réinitialisation de mot de passe -->
+    <div class="reset-container" id="resetContainer">
+        <h2>Réinitialisation du mot de passe</h2>
+        <form id="resetForm">
+            <div class="form-group">
+                <label for="email">Adresse e-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit">Réinitialiser le mot de passe</button>
+            <p class="success" id="successMsg">Un lien de réinitialisation a été envoyé à votre adresse e-mail.</p>
+            <p class="error" id="resetErrorMsg">Adresse e-mail non reconnue.</p>
+            <div class="forgot-password">
+                <a href="#" onclick="showLoginForm()">Retour à la connexion</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript -->
+</body>
+</html>
