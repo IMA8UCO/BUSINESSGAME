@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8"> <!-- Définit l'encodage des caractères en UTF-8 -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapte la mise en page pour les mobiles -->
+
+<title>Page de Connexion</title> <!-- Titre affiché dans l'onglet du navigateur -->
+
+<link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS externe -->
+
+</head>
+
+<body>
+    <!-- Formulaire de connexion -->
+<div class="container active" id="loginContainer"> <!-- Conteneur actif pour afficher le formulaire de connexion par défaut -->
+
+<h2>Connexion</h2> <!-- Titre du formulaire de connexion -->
+
+ <form id="loginForm"> <!-- Début du formulaire de connexion -->
+
+    <div class="form-group"> <!-- Groupe de champ pour l'email -->
+
+<label for="loginEmail">Adresse e-mail</label> <!-- Etiquette pour le champ email -->
+
+ <input type="email" id="loginEmail" name="email" required placeholder="exemple@domaine.com"> <!-- Champ de saisie pour l'email -->
+     </div>
+
+    <div class="form-group"> <!-- Groupe de champ pour le mot de passe -->
+            
+<label for="loginPassword">Mot de passe</label> <!-- Etiquette pour le champ mot de passe -->
+
+<input type="password" id="loginPassword" name="password" required placeholder="Votre mot de passe"> <!-- Champ de saisie pour le mot de passe -->
+            </div>
+            
+<button type="submit">Se connecter</button> <!-- Bouton de soumission du formulaire de connexion -->
+            
+<p class="error" id="loginErrorMsg">Identifiant ou mot de passe incorrect.</p> <!-- Message d'erreur pour la connexion -->
+            
+<div class="forgot-password"> <!-- Section pour les liens supplémentaires -->
+
+ <a href="#" onclick="showResetForm()">Mot de passe oublié ?</a> <!-- Lien pour afficher le formulaire de réinitialisation -->
+
+<a href="#" onclick="showRegisterForm()">S'inscrire</a> <!-- Lien pour afficher le formulaire d'inscription -->
+
+            </div>
+
+        </form>
+
+    </div>
+
+<!-- Formulaire de réinitialisation -->
+
+<div class="container" id="resetContainer"> <!-- Conteneur pour le formulaire de réinitialisation -->
+
+<h2>Réinitialisation</h2> <!-- Titre du formulaire de réinitialisation -->
+
+    <form id="resetForm"> <!-- Début du formulaire de réinitialisation -->
+
+     <div class="form-group"> <!-- Groupe de champ pour l'email -->
+
+ <label for="resetEmail">Adresse e-mail</label> <!-- Etiquette pour le champ email -->
+
+ <input type="email" id="resetEmail" name="email" required placeholder="exemple@domaine.com"> <!-- Champ de saisie pour l'email -->
+
+     </div>
+
+ <button type="submit">Réinitialiser</button> <!-- Bouton de soumission du formulaire de réinitialisation -->
+
+<p class="success" id="resetSuccessMsg">Un lien a été envoyé à votre e-mail.</p> <!-- Message de succès pour la réinitialisation -->
+
+<p class="error" id="resetErrorMsg">Adresse e-mail non reconnue.</p> <!-- Message d'erreur pour la réinitialisation -->
+
+<div class="forgot-password"> <!-- Section pour les liens supplémentaires -->
+
+<a href="#" onclick="showLoginForm()">Retour à la connexion</a> <!-- Lien pour revenir au formulaire de connexion -->
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- Formulaire d'inscription -->
+
+<div class="container" id="registerContainer"> <!-- Conteneur pour le formulaire d'inscription -->
+
+<h2>Inscription</h2> <!-- Titre du formulaire d'inscription -->
+
+    <form id="registerForm"> <!-- Début du formulaire d'inscription -->
+
+<div class="form-group"> <!-- Groupe de champ pour le nom complet -->
+
+ <label for="registerName">Nom complet</label> <!-- Etiquette pour le champ nom complet -->
+
+<input type="text" id="registerName" name="name" required placeholder="Votre nom complet"> <!-- Champ de saisie pour le nom complet -->
+    </div>
+
+    <div class="form-group"> <!-- Groupe de champ pour l'email -->
+
+ <label for="registerEmail">Adresse e-mail</label> <!-- Etiquette pour le champ email -->
+
+    <input type="email" id="registerEmail" name="email" required placeholder="exemple@domaine.com"> <!-- Champ de saisie pour l'email -->
+
+            </div>
+     <div class="form-group"> <!-- Groupe de champ pour le mot de passe -->
+
+<label for="registerPassword">Mot de passe</label> <!-- Etiquette pour le champ mot de passe -->
+
+<input type="password" id="registerPassword" name="password" required placeholder="Créer un mot de passe"> <!-- Champ de saisie pour le mot de passe -->
+            </div>
+<div class="form-group"> <!-- Groupe de champ pour la confirmation du mot de passe -->
+     <label for="registerConfirmPassword">Confirmer le mot de passe</label> <!-- Etiquette pour le champ confirmation -->
+
+    <input type="password" id="registerConfirmPassword" name="confirmPassword" required placeholder="Confirmez votre mot de passe"> <!-- Champ de saisie pour confirmer le mot de passe -->
+
+</div>
+            
+     <button type="submit">S'inscrire</button> <!-- Bouton de soumission du formulaire d'inscription -->
+
+    <p class="error" id="registerErrorMsg">Erreur lors de l'inscription.</p> <!-- Message d'erreur pour l'inscription -->
+
+        <p class="success" id="registerSuccessMsg">Inscription réussie !</p> <!-- Message de succès pour l'inscription -->
+        
+<div class="forgot-password"> <!-- Section pour les liens supplémentaires -->
+
+    <a href="#" onclick="showLoginForm()">Déjà inscrit ? Connectez-vous</a> <!-- Lien pour revenir au formulaire de connexion -->
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <script src="script.js"></script> <!-- Lien vers le fichier JavaScript externe -->
+</body>
+
+</html>
